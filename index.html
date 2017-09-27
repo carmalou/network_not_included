@@ -152,7 +152,9 @@ class: left, middle, inverse, inverse
   - Use sqlite to save data to the machine to save on database calls
 
 ???
+Electron is a framework from github that allows you to take your html and javascript files and serve them from the user's hard drive, instead of from a far-off webserver. This means we can take our web apps offline, and using other tooling built into the Chromium browser, we can provide the user a similar experience to the online version of our app.
 
+We can use event listeners to check for connection, and pull and save data only when their is a connection. Further, we can bundle sqlite databases into our apps to save user data locally and forego database requests when possible.
 ---
 class: left, middle, inverse, inverse
 
@@ -174,7 +176,9 @@ class: left, middle, inverse, inverse
   - Or a PDF is good too!
 
 ???
+I can tell you from experience that it is incredibly difficult to learn when you don't have internet access. I would have loved to have had an offline version of Stack Overflow when I was first learning programming, because I didn't have internet at home. Offline docs are incredibly important, and Electron has done a great job with their offline API docs. The docs are complete and thorough, and show real examples of the code in production since the app is an Electron app.
 
+That is a great example, but docs can be difficult enough without adding an entire new app to contain them. It doesn't have to be so fancy. It can be a matter of taking your readme and making it into a word doc that can be downloaded -- or a PDF. Something the user can keep on their computer locally.
 ---
 class: left, middle, inverse, inverse
 
@@ -186,6 +190,11 @@ class: left, middle, inverse, inverse
     * Will your user be able to continue their work?
     * How will you indicate that the app is down?
     * Can the user complete some tasks but not others?
+
+???
+Some apps are not going to work in an offline setting. News is event driven, healthcare requires passing data from provider to provider, and stores need their products to update. Does this mean that these aren't going to work in an offline Electron app? Not entirely. There are still methods to handle running these on the Desktop and gracefully fail when connection is lost.
+
+The most important thing to considering what will happen when you lose connection _before_ it happens. Should the user see an error screen and nothing else? Should the user see a light version of the app where some features are available, but not others? Should they be able to continue with their work and save once they regain connection? These are the questions to answer when deciding how to handle a loss of connection.
 ---
 class: left, middle, inverse, inverse
 
@@ -197,7 +206,15 @@ class: left, middle, inverse, inverse
 - Be conscious of user limitations and think about how to handle loss of access in a graceful way
 
 ???
+My number one goal from this talk was to bring awareness to this issue because when I've talked about it before, I've gotten surprise from people who didn't realize that access was as tenuous as it is. My next goal was to show you how we can use technology that we are already using -- namely JavaScript -- to help ease the transition of having a connection and losing it, and then coming back.
 
+The most important thing is knowing this is something that _can_ be addressed, and considering how your app is going to address as the app is being written.
+---
+layout: false
+class: center, middle, inverse
+# Carmen Bourlon
+## Twitter: [@carmalou](https://twitter.com/carmalou)
+## Blog: [carmalou.com](http://carmalou.com)
 
 </textarea>
     <script src="./scripts/remark-latest.min.js">
