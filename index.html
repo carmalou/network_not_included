@@ -34,7 +34,7 @@ class: center, middle, inverse, inverse
 
 # Network Not Included
 
-### How we can take tech offline and help fix the pipeline
+### How we can take tech offline to increase accessibility
 
 ???
 Hey everyone. I'm super excited to talk to you about this today. Internet access is something that is very close to my heart. I know how fleeting it can be and how difficult it is when you don't have it. I've been interested in how to fix this issue for a long time, and I'm excited to share that with you all.
@@ -99,7 +99,7 @@ class: left, middle, inverse, inverse
 ???
 Smartphones, much like the web itself, are ubiquitious in the United States. It seems like nearly everyone has one, but for many it is their only access to the internet.
 
-64% of Americans have cell phones, but of those 19% don't have consistent internet access beyond their phone. This is roughly 23 million Americans.
+64% of Americans have cell phones, but of those 19% don't have consistent internet access beyond their phone. This is between 35 and 40 million Americans.
 
 To go further, 15% indicated that they have limited options for accessing the internet outside of their cellphone. This can mean being limited to the public library, or public spaces like Starbucks or other businesses offering internet.
 
@@ -107,7 +107,7 @@ Seven percent of people said they had a smart phone, but no home internet _and_ 
 ---
 class: left, middle, inverse, inverse
 
-# Why the lack of access?
+# Predictors of access
 
 * Age: 18-29 year olds are more likely to be smartphone dependent
 * Income: 13% of Americans with incomes under $30k are smartphone-dependent
@@ -139,9 +139,9 @@ class: left, middle, inverse, inverse
 * Use local storage for heavy caching
 
 ???
-We all know there is a pipeline problem. Women and underrepresented minorities are far too rare in tech. Make no mistake, without opportunities to learn and get online, the pipeline will not improve for women and minorities.
+What really stood out for me when I was doing this research wasn't the fact that internet access is tenuous and based mostly on whether or not you can afford it. That actually didn't surprise me at all, and it makes sense. If you are under the poverty line it makes perfect sense that you won't have internet. What was striking for me was all this talk we hear today about getting more underrepresented minorities in the tech pipeline when according to the numbers, these are the very people most likely to be losing access.
 
-With hybrid mobile and desktop apps, we can take the JavaScript we are already writing, and make our products more accessible to those who need them.
+It's difficult to imagine opportunities for people without access to the web, so what can we -- people who are already in tech -- do? With hybrid mobile and desktop apps, we can take the JavaScript we are already writing, and make our products more accessible to those who need them.
 ---
 class: left, middle, inverse, inverse
 
@@ -152,7 +152,7 @@ class: left, middle, inverse, inverse
   - Use sqlite to save data to the machine to save on database calls
 
 ???
-The important thing with an electron app is to
+
 ---
 class: left, middle, inverse, inverse
 
@@ -161,6 +161,9 @@ class: left, middle, inverse, inverse
   - Similarly, you can check for network connectivity and run updates when you are connected
   - Make use of local storage or sqlite for storing data
   - Create small apps more often
+
+???
+We can increase access to our products by making them available via mobile. But it's important to be careful and considerate about how we access the data the app needs. If the user is working with a data cap, we don't want our app using up most or all of their data. So we can bundle more data into the app to reduce calls into an API. We can make small apps -- but write more of them -- to keep the file sizes reasonable and help balance between providing content but maintaining data capacity.
 ---
 class: left, middle, inverse, inverse
 
@@ -169,13 +172,15 @@ class: left, middle, inverse, inverse
   - Complete docs are important!
   - Port them into an electron app similar to the electron API docs
   - Or a PDF is good too!
+
+???
+
 ---
 class: left, middle, inverse, inverse
 
 # What if I can't take my app offline?
 
   - Take advantage of tools like offline.js, which allow you to stop ajax calls and restart them when you have a connection
-  - Use service workers to help cache your app _before_ connection is lost
   - Utilize localStorage to help store data locally
   - Consider what will happen when you lose connection
     * Will your user be able to continue their work?
@@ -184,7 +189,15 @@ class: left, middle, inverse, inverse
 ---
 class: left, middle, inverse, inverse
 
-# Now what
+# Key takeaways
+
+- Use Electron to take your app offline
+  * Take advantage of built-in tools like navigator.onLine to run ajax calls online when your app is online
+- Bundle a database into your app like sqlite to store as much data locally as possible
+- Be conscious of user limitations and think about how to handle loss of access in a graceful way
+
+???
+
 
 </textarea>
     <script src="./scripts/remark-latest.min.js">
