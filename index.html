@@ -35,22 +35,25 @@ class: center, middle, inverse, inverse
 # Network Not Included
 
 ### How we can take tech offline and help fix the pipeline
----
 
-class: center, middle, inverse, inverse
-
-# About me
+???
+Hey everyone. I'm super excited to talk to you about this today. Internet access is something that is very close to my heart. I know how fleeting it can be and how difficult it is when you don't have it. I've been interested in how to fix this issue for a long time, and I'm excited to share that with you all.
 ---
 layout: false
 class: center, middle, inverse
 # Carmen Bourlon
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](http://carmalou.com)
+
+???
+A little about me, I won't spend too much time here. I'd definitely recommend my blog...my twitter is a little more iffy.
 ---
 class: center, middle, inverse, inverse
 
 # The Internet is kind of a big deal
-  <!-- Cue Anchorman gif here -->
+
+???
+Can you raise your hand if you were online today? It's kind of unfair since I'm talking to a room full of tech people, but it holds true for basically every industry today. And perhaps even more so outside of work.
 ---
 class: left, middle, inverse, inverse
 
@@ -80,7 +83,7 @@ Keep up with school?
 
 Largely the answer to these is no.
 
-Talk about PHONES
+You might be wondering about cell phones. Well mobile apps can help bridge the gap between access and none, if you have a smartphone and with data. And that's where things get a little dicey.
 
 Maybe talk about my experience without internet here? idk
 ---
@@ -94,9 +97,9 @@ class: left, middle, inverse, inverse
 * 7% indicated that they owned a cellphone but had limited options for access and no internet at home
 
 ???
-I would be remiss not to mention cell phones, right? Smartphones are ubiquitious in the United States. Nearly everyone has one, but for many it is their only access to the internet.
+Smartphones, much like the web itself, are ubiquitious in the United States. It seems like nearly everyone has one, but for many it is their only access to the internet.
 
-64% of Americans have cell phones, but of those 19% don't have consistent internet access beyond their phone. This is roughly 36 million Americans.
+64% of Americans have cell phones, but of those 19% don't have consistent internet access beyond their phone. This is roughly 23 million Americans.
 
 To go further, 15% indicated that they have limited options for accessing the internet outside of their cellphone. This can mean being limited to the public library, or public spaces like Starbucks or other businesses offering internet.
 
@@ -131,15 +134,57 @@ class: left, middle, inverse, inverse
 # So what does this mean for tech?
 
 * Take apps offline
-* Use local storage for heavy caching
 * Make mobile apps with Ionic and React Native
 * Downloadable documentation
+* Use local storage for heavy caching
 
 ???
 We all know there is a pipeline problem. Women and underrepresented minorities are far too rare in tech. Make no mistake, without opportunities to learn and get online, the pipeline will not improve for women and minorities.
 
-With hybrid mobile and desktop apps, we can take the Javascript we are already writing, and make our products more accessible to those who need them.
+With hybrid mobile and desktop apps, we can take the JavaScript we are already writing, and make our products more accessible to those who need them.
+---
+class: left, middle, inverse, inverse
 
+# Take apps offline
+
+* Use Electron to make your app available without the web
+  - Use event listeners to watch for Internet access and only run requests when connected
+  - Use sqlite to save data to the machine to save on database calls
+
+???
+The important thing with an electron app is to 
+---
+class: left, middle, inverse, inverse
+
+# Make hybrid mobile apps
+
+  - Similarly, you can check for network connectivity and run updates when you are connected
+  - Make use of local storage or sqlite for storing data
+  - Create small apps more often
+---
+class: left, middle, inverse, inverse
+
+# Downloadable documentation
+
+  - Complete docs are important!
+  - Port them into an electron app similar to the electron API docs
+  - Or a PDF is good too!
+---
+class: left, middle, inverse, inverse
+
+# What if I can't take my app offline?
+
+  - Take advantage of tools like offline.js, which allow you to stop ajax calls and restart them when you have a connection
+  - Use service workers to help cache your app _before_ connection is lost
+  - Utilize localStorage to help store data locally
+  - Consider what will happen when you lose connection
+    * Will your user be able to continue their work?
+    * How will you indicate that the app is down?
+    * Can the user complete some tasks but not others?
+---
+class: left, middle, inverse, inverse
+
+# Now what
 
 </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
