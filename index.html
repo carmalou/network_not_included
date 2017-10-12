@@ -15,15 +15,29 @@
       a {
         color: #a07cc0;
       }
+      li {
+        font-size: 24pt;
+      }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .inverse {
-        background: #272822;
-        color: #9b9c96;
+        background: #000;
+        color: #fff;
       }
       .remark-slide-content {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+      }
+      .stripe {
+        height: 5px;
+        width: 100%;
+        background-color: indigo;
+        border-top: 1px solid rebeccapurple;
+        border-bottom: 1px solid rebeccapurple;
+        position: absolute;
+        margin-top: 125px;
+        left: 0;
+        right: 0;
       }
     </style>
   </head>
@@ -41,11 +55,23 @@ Hey everyone. I'm super excited to talk to you about this today.
 
 Internet access is something that is very close to my heart. I know how fleeting it can be and how difficult everyday activities are when you don't have it. It goes beyond being the only person in the office not to have seen Stranger Things, or not having Facebook on your phone. A lack of internet access can become a real issue in someone's life, and I've been interested in how to fix this issue for a long time.
 ---
+class: center, middle, inverse, inverse
+
+# Network Not Included
+
+### How we can take tech offline to increase accessibility
+
+???
+Hey everyone. I'm super excited to talk to you about this today.
+
+Internet access is something that is very close to my heart. I know how fleeting it can be and how difficult everyday activities are when you don't have it. It goes beyond being the only person in the office not to have seen Stranger Things, or not having Facebook on your phone. A lack of internet access can become a real issue in someone's life, and I've been interested in how to fix this issue for a long time.
+---
 layout: false
 class: center, middle, inverse
 # Carmen Bourlon
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](http://carmalou.com)
+
 
 ???
 Don't forget to breathe.
@@ -55,6 +81,7 @@ You'll do great.
 class: center, middle, inverse, inverse
 
 # The Internet is kind of a big deal
+
 
 ???
 Can you raise your hand if you were online today? It's kind of unfair since I'm talking to a room full of tech people, but it holds true for basically every industry today. And perhaps even more so outside of work.
@@ -71,6 +98,7 @@ class: left, middle, inverse, inverse
 * Finance
 * Job search
 
+
 ???
 It's amazing the changes that we've seen from collaboration -- and the internet is largely to thank for that. Because of the internet, we are able to communicate across the country and even further -- across the world. All over video, and mostly without lag.
 
@@ -78,76 +106,131 @@ We've made massive strides and are able to work on opposite sides of the country
 
 Nurses are able to communicate with doctors almost simultaneously. Educational resources are constantly at our fingertips. In another life, I was a nurse's aide, and I can remember smartphones were really picking up in popularity. All of the doctors had smartphones, and most of them were already used to emailing prescriptions to the pharmacy.
 
-I remember one occasion, we had a lady who was ill with what the nurse thought was likely pneumonia, but her doctor was out of town. The nurse was able to text the doctor the symptoms. The doctor was able to email an order for an x-ray which confirmed the diagnosis. Doctor then emailed the prescription to the pharmacy and the lady in question got the medicine she needed. The doctor did all of this from his phone, and this was not an uncommon occurance.
+I remember one occasion, we had a lady who was ill with what the nurse thought was likely pneumonia, but her doctor was out of town. The nurse was able to text the doctor the symptoms. The doctor was able to email an order for an x-ray which confirmed the diagnosis. Doctor then emailed the prescription to the pharmacy and the patient in question got the medicine she needed. The doctor did all of this from his phone, and this was not an uncommon occurance.
 
-I tell you that to say, how amazing technology is. With her doctor out of town, the lady in question would've had to wait for another doctor to have availability to see or -- or even for her doctor to return. But instead because of collaboration and technology, she got the medicine she needed within a day.
+I tell you that to say, how amazing technology is. With her doctor out of town, this patient would've had to wait for another doctor to have availability to see her -- or even for her doctor to return. But instead because of collaboration and technology, she got the medicine she needed within a day.
 
-All of this is wonderful -- but it comes at a price. That price is anywhere between 50 and 200 per month, plus a modem and router, and a computer for access.
+All of this is wonderful -- but it comes at a price. That price is anywhere between 50 and 200 per month, plus a modem and router, and a computer for access, all that in addition to a cell phone plan which can cost just as much.
 ---
 class: center, middle, inverse, inverse
 
 # If you aren't online, where are you?
 
-???
-If you aren't online, how can you search for work?
-If you aren't online, how can you keep up with current events?
-How can you view your financial data and keep up with your money?
-Can you communicate with your family?
-Keep up with school?
 
-Largely the answer to these is no.
+???
+PAUSE
+
+If you aren't online, how can you search for work? <br />
+If you aren't online, how can you keep up with current events? <br />
+How can you view your financial data and keep up with your money? <br />
+Can you communicate with your family? <br />
+Keep up with school? <br />
+
+Largely the answer to these is no.<br />
 
 You might be wondering about cell phones. Well mobile apps can help bridge the gap between access and none, if you have a smartphone and with data. And that's where things get a little dicey.
+---
+class: center, middle, inverse, inverse
+
+# What is inconsistent internet access?
+
+???
+Through this talk I'm going to be talking about a lack of internet access. I want to quickly talk about the difference between inconsistent access and no access.
+
+Obviously no access means you don't have any access. That's true for some, however that is a really hard problem to solve. Some cities are providing city-wide internet access, and that would help. However a complete lack of access is not the focus of this talk.
+
+Instead I'm going to talk to you about inconsistent access.
+
+Inconsistent access means you have access sometimes and sometimes you don't -- but you probably guessed that. So most people in this demographic are going to be accessing via a cell phone. They might have a computer, but they might not. In order to access the internet on a computer they'll likely need to go to a public place like a coffee shop or restaurant that offers wifi. If they don't have a computer, they might need to go to a public library to access the internet on a public computer. All of this requires going to another location -- even finding the location -- in order to use the internet.
+
+So now that we have a good definition of what inconsistent internet access looks like, let's take a look at the numbers.
 ---
 class: left, middle, inverse, inverse
 
 # Internet Access By The Numbers
 
-* 64% of Americans have smartphones, but of these 19% do not have consistent internet access beyond their phone
-* 15% indicated that they owned a smartphone but had limited options for accessing the internet outside of their cellphones
-* 10% indicated that they owned a smartphone but had no high-speed internet at home
-* 7% indicated that they owned a cellphone but had limited options for access and no internet at home
+### 64% of Americans have smartphones
 
 ???
-Smartphones, much like the web itself, are ubiquitious in the United States. It seems like nearly everyone has one, but for many it is their only access to the internet.
+We can't really talk about the web without talking about smartphones. After all, smartphones were the driving force of the story I told before about the patient with pneumonia, and they're much more than that. They are a connect to the outside world.
 
-64% of Americans have cell phones, but of those 19% don't have consistent internet access beyond their phone -- this number comes out to between 35 and 40 million Americans.
+With smartphones we carry around the web in our pocket. And smartphones are ubiquitious. It seems like nearly everyone has one. In fact could you raise your hand if you have a smartphone?
 
-Inconsistent access might mean that they don't have internet in their home, or that they don't have access to public places like libraries or panera where internet is available.
+However, for many -- as the next few slides will show -- this is their only consistent access.
+---
+class: left, middle, inverse, inverse
 
-To go further, 15% indicated that they have limited options for accessing the internet outside of their cellphone. This can mean being limited to the public library, or public spaces like Starbucks or other businesses offering internet.
+# Internet Access By The Numbers
 
-Seven percent of people said they had a smart phone, but no home internet _and_ limited options for access.
+### 12% of Americans are "smartphone-dependent"
+
+???
+Of the more than half of us who have smartphones, many of us are "smartphone-dependent" -- meaning that we don't have access outside of our phone.
+
+As we talked about before, 64% of Americans have smartphones, but 12% are dependent upon them. This comes out to nearly 40 million people. That's 40 million people dependent upon their phones for what most of us would consider basic necessities at this point -- like checking a bank balance or even researching a health issue.
+---
+class: left, middle, inverse, inverse
+
+# Internet Access By The Numbers
+
+### 10% experience "limited opportunities" for access
+
+???
+Taking a closer look at these numbers, we will find that there are a few definitions for "smartphone-dependence." One of the qualifications is having "limited opportunities for access _outside_ their smartphone." So again, this means they don't have access in public places like coffee shops or restaurants or libraries. It could be because they are too far away, or don't have a way to get to the public space. As such, they are left using their phone for searches most of us might want to use a computer for.
+
+To put this into real numbers, that's more than 30 million people.
+---
+class: left, middle, inverse, inverse
+
+# Internet Access By The Numbers
+
+### 6% have no access at home
+
+???
+Another definition for "smartphone-dependent" is not having internet within your home. Roughly 20 million "smartphone-dependent" individuals don't have internet in their home -- but maybe have access in a public space.
+---
+class: left, middle, inverse, inverse
+
+# Internet Access By The Numbers
+
+### 4% experience limited opportunities and have no access at home
+
+???
+The last definition is both. These individuals lack both internet at home and access in a public space. That's more than 14 million people almost completely reliant on a smartphone to get them the basic information that we all need to get through the day.
 ---
 class: left, middle, inverse, inverse
 
 # Predictors of access
 
 * Age: 18-29 year olds are more likely to be smartphone dependent
-* Income: 13% of Americans with incomes under $30k are smartphone-dependent
-* Minorities: 13% of Latinos and 12% of African Americans are smartphone-dependent
+* Income: Americans with incomes under $30k are more likely to be smartphone-dependent
+* Ethnicity: Latinos and African Americans are more likely to be smartphone-dependent
 
 ???
-The greatest predictor of having internet in your home is income. With internet ranging from $50/month to more than $200, plus hardware and a computer to surf the web, it can be difficult to justify. Even more it can simply be out of reach.
+The greatest predictor of having internet in your home is income. Taking a look at the other factors identified, that makes a lot of sense. Lower income is tied to a younger age, and there is a well-documented wage gap for underrepresented minorities. So both of those can tie back into the issue of income and funds.
 
-Cell phones can help bridge this gap.
+And with internet ranging from $50/month to more than $200, plus hardware and a computer to surf the web, it can be difficult to justify. Even more it can simply be out of reach.
+
+As we saw before, cell phones can help bridge this gap. *But* is that that enough?
 ---
 class: left, middle, inverse, inverse
 
 # Access via smartphone is tenuous
 
-* 48% of smartphone-dependent individuals have had to stop or cancel their plan due to cost
-* 51% of smartphone-dependent individuals "occasionally" reach their maximum data allotment before their plan restarts
-* 30% of smartphone-dependent individuals "frequently" reach their maximum data allotment before their plan restarts
+* 48% stop or cancel their plan due to cost
+* 51% "occasionally" hit a data-cap
+* 30% "frequently" hit a data-cap
 
 ???
 Relying on smartphones to bridge the gap between access and no access is ill-advised. With a majority of smartphone-dependent individuals losing access due to cost, they are left unable to communicate, search for work, research health issues, and other everyday searches.
 
-So the irony of the story I told you before is that while the patient was a benefactor of technology, many of her caregivers were the very individuals most likely to lose their internet connectivity.
+So the irony of the story I told you before is that while the patient was a benefactor of technology, many of her caregivers are the very individuals most likely to lose their internet connectivity.
 
-With modern technology, her caregivers were able to get her the medicine she needed and she was on the road to recovery in a fraction of the time it would've taken just a few decades before. However her caregivers were often relying on their cellphones for internet access and at risk of turning of their cellphone or running out of data before the plan could restart.
+With modern technology, her caregivers were able to get her the medicine she needed and she was on the road to recovery in a fraction of the time it would've taken just a few years before.
 
-And without access, these people were placed into silos, virtually unable to communicate with the outside world.
+However her direct caregivers -- think nurse aides and kitchen staff and even some nurses -- were at the mercy of this technology. They were often relying on their cellphones for any sort of internet access, and at risk of turning of their phone or running out of data before the plan could restart.
+
+And without access, these individuals are placed into silos, virtually unable to communicate with the outside world.
 ---
 class: left, middle, inverse, inverse
 
@@ -156,7 +239,6 @@ class: left, middle, inverse, inverse
 * Take apps offline
 * Make mobile apps with Ionic and React Native
 * Downloadable documentation
-* Use local storage for heavy caching
 
 ???
 What really stood out for me when I was doing this research wasn't the fact that internet access is tenuous and based mostly on whether or not you can afford it. That actually didn't surprise me at all, and it makes sense. If you are under the poverty line it makes perfect sense that you won't have internet. What was striking for me was all this talk we hear today about getting more underrepresented minorities in the tech pipeline when according to the numbers, these are the very people most likely to be losing access.
@@ -170,8 +252,9 @@ class: left, middle, inverse, inverse
 # Take apps offline
 
 * Use Electron to make your app available without the web
-  - Use event listeners to watch for Internet access and only run requests when connected
-  - Use sqlite to save data to the machine to save on database calls
+* Use event listeners to watch for Internet access and only run requests when connected
+* Use sqlite to save data to the machine to save on database calls
+
 
 ???
 Electron is a framework from Github that allows you to take your html and javascript files and serve them from the user's hard drive, instead of from a far-off webserver. This means we can take our web apps offline, and using other tooling built into the Chromium browser, we can provide the user a similar experience to the online version of our app.
@@ -182,9 +265,10 @@ class: left, middle, inverse, inverse
 
 # Make hybrid mobile apps
 
-  - Similarly, you can check for network connectivity and run updates when you are connected to wifi or on a network
-  - Make use of local storage or sqlite for storing data
-  - Create small apps more often
+* Similarly, you can check for network connectivity and run updates when you are connected to wifi or on a network
+* Make use of local storage or sqlite for storing data
+* Create small apps more often
+
 
 ???
 We can increase access to our products by making them available via mobile. But it's important to be careful and considerate about how we access the data the app needs. If the user is working with a data cap, we don't want our app using up most or all of their data.
@@ -195,9 +279,10 @@ class: left, middle, inverse, inverse
 
 # Downloadable documentation
 
-  - Complete docs are important!
-  - Port them into an Electron app similar to the Electron API docs
-  - Or a PDF is good too!
+* Complete docs are important!
+* Port them into an Electron app similar to the Electron API docs
+* Or a PDF is good too!
+
 
 ???
 I can tell you from experience that it is incredibly difficult to learn when you don't have internet access. I would have loved to have had an offline version of Stack Overflow when I was first learning programming, because I didn't have internet at home. Offline docs are incredibly important, and Electron has done a great job with their offline API docs. The docs are complete and thorough, and show real examples of the code in production since the app is an Electron app.
@@ -210,37 +295,48 @@ class: left, middle, inverse, inverse
 
 # What if I can't take my app offline?
 
-  - Take advantage of tools like offline.js, which allow you to stop ajax calls and restart them when you have a connection
-  - Utilize localStorage to help store data locally
-  - Consider what will happen when you lose connection
-    * Will your user be able to continue their work?
-    * How will you indicate that the app is down?
-    * Can the user complete some tasks but not others?
+  - Take advantage of tools like offline.js
+      * Allows you to stop ajax calls and restart them when you have a connection
+  - Utilize Local Storage to help store data locally
 
 ???
 Some apps are not going to work in an offline setting. News is event driven, healthcare requires passing data from provider to provider, and stores need their products to update. Does this mean that these aren't going to work in an offline Electron app? Not entirely. There are still methods to handle running these on the Desktop and gracefully fail when connection is lost.
+---
+class: left, middle, inverse, inverse
 
-The most important thing to considering what will happen when you lose connection _before_ it happens. Should the user see an error screen and nothing else? Should the user see a light version of the app where some features are available, but not others? Should they be able to continue with their work and save once they regain connection? These are the questions to answer when deciding how to handle a loss of connection.
+# What if I can't take my app offline?
+
+- Consider what will happen when you lose connection
+  * Will your user be able to continue their work?
+  * How will you indicate that the app is down?
+  * Can the user complete some tasks but not others?
+
+???
+The most important thing to consider is what will happen when you lose connection _before_ it happens. Should the user see an error screen and nothing else? Should the user see a light version of the app where some features are available, but not others? Should they be able to continue with their work and save once they regain connection? These are the questions to answer when deciding how to handle a loss of connection.
 ---
 class: left, middle, inverse, inverse
 
 # Key takeaways
 
 - Use Electron to take your app offline
-  * Take advantage of built-in tools like navigator.onLine to run ajax calls online when your app is online
+- Take advantage of built-in tools like navigator.onLine to run ajax calls online when your app is online
 - Bundle a database into your app like sqlite to store as much data locally as possible
 - Be conscious of user limitations and think about how to handle loss of access in a graceful way
 
-???
-My number one goal from this talk was to bring awareness to this issue because when I've talked about it before, I've gotten surprise from people who didn't realize that access was as tenuous as it is. My next goal was to show you how we can use technology that we are already using -- namely JavaScript -- to help ease the transition of having a connection and losing it, and then coming back.
 
-The most important thing is knowing this is something that _can_ be addressed, and considering how your app is going to address as the app is being written.
+???
+My number one goal from this talk was to bring awareness to this issue because when I've talked about it before, I've gotten surprise from people who didn't realize that access was as tenuous as it is.
+
+My next goal was to show you how we can use technology that we are already using -- namely JavaScript -- to help ease the transition of having a connection and losing it, and then coming back.
+
+The most important thing -- if you leave knowing nothing else -- know that a lack of internet access is a problem, but it is a problem that we can solve.
 ---
 layout: false
 class: center, middle, inverse
 # Carmen Bourlon
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](http://carmalou.com)
+
 
 </textarea>
     <script src="./scripts/remark-latest.min.js">
