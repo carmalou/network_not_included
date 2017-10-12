@@ -200,11 +200,11 @@ The last definition is both. These individuals lack both internet at home and ac
 ---
 class: left, middle, inverse, inverse
 
-# Predictors of access
+# Predictors of smartphone-dependence
 
-* Age: 18-29 year olds are more likely to be smartphone dependent
-* Income: Americans with incomes under $30k are more likely to be smartphone-dependent
-* Ethnicity: Latinos and African Americans are more likely to be smartphone-dependent
+* Age: 18-29 year olds
+* Income: Incomes under $30k
+* Ethnicity: Latinos and African Americans
 
 ???
 The greatest predictor of having internet in your home is income. Taking a look at the other factors identified, that makes a lot of sense. Lower income is tied to a younger age, and there is a well-documented wage gap for underrepresented minorities. So both of those can tie back into the issue of income and funds.
@@ -251,10 +251,10 @@ class: left, middle, inverse, inverse
 
 # Take apps offline
 
-* Use Electron to make your app available without the web
-* Use event listeners to watch for Internet access and only run requests when connected
-* Use sqlite to save data to the machine to save on database calls
-
+* Use Electron to take your app offline
+* Use event listeners to watch for connection
+* Only run requests when connected
+* Save data to the machine to save on database calls
 
 ???
 Electron is a framework from Github that allows you to take your html and javascript files and serve them from the user's hard drive, instead of from a far-off webserver. This means we can take our web apps offline, and using other tooling built into the Chromium browser, we can provide the user a similar experience to the online version of our app.
@@ -265,10 +265,10 @@ class: left, middle, inverse, inverse
 
 # Make hybrid mobile apps
 
-* Similarly, you can check for network connectivity and run updates when you are connected to wifi or on a network
-* Make use of local storage or sqlite for storing data
+* Check for network connectivity
+* Only run updates when connected to wifi
+* Make use of local storage
 * Create small apps more often
-
 
 ???
 We can increase access to our products by making them available via mobile. But it's important to be careful and considerate about how we access the data the app needs. If the user is working with a data cap, we don't want our app using up most or all of their data.
@@ -280,9 +280,8 @@ class: left, middle, inverse, inverse
 # Downloadable documentation
 
 * Complete docs are important!
-* Port them into an Electron app similar to the Electron API docs
+* Port them into an Electron app
 * Or a PDF is good too!
-
 
 ???
 I can tell you from experience that it is incredibly difficult to learn when you don't have internet access. I would have loved to have had an offline version of Stack Overflow when I was first learning programming, because I didn't have internet at home. Offline docs are incredibly important, and Electron has done a great job with their offline API docs. The docs are complete and thorough, and show real examples of the code in production since the app is an Electron app.
@@ -307,9 +306,9 @@ class: left, middle, inverse, inverse
 # What if I can't take my app offline?
 
 - Consider what will happen when you lose connection
-  * Will your user be able to continue their work?
-  * How will you indicate that the app is down?
-  * Can the user complete some tasks but not others?
+  * Will the user be able to keep working?
+  * What will indicate that the app is down?
+  * Can some tasks be completed but not others?
 
 ???
 The most important thing to consider is what will happen when you lose connection _before_ it happens. Should the user see an error screen and nothing else? Should the user see a light version of the app where some features are available, but not others? Should they be able to continue with their work and save once they regain connection? These are the questions to answer when deciding how to handle a loss of connection.
@@ -319,10 +318,9 @@ class: left, middle, inverse, inverse
 # Key takeaways
 
 - Use Electron to take your app offline
-- Take advantage of built-in tools like navigator.onLine to run ajax calls online when your app is online
-- Bundle a database into your app like sqlite to store as much data locally as possible
-- Be conscious of user limitations and think about how to handle loss of access in a graceful way
-
+- Watch for connection with eventlisteners
+- Store data locally
+- Be conscious of access limitations
 
 ???
 My number one goal from this talk was to bring awareness to this issue because when I've talked about it before, I've gotten surprise from people who didn't realize that access was as tenuous as it is.
@@ -330,6 +328,14 @@ My number one goal from this talk was to bring awareness to this issue because w
 My next goal was to show you how we can use technology that we are already using -- namely JavaScript -- to help ease the transition of having a connection and losing it, and then coming back.
 
 The most important thing -- if you leave knowing nothing else -- know that a lack of internet access is a problem, but it is a problem that we can solve.
+---
+# References:
+
+- [U.S. Smartphone Use in 2015](http://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/)
+- [Internet/Broadband Fact Sheet](http://www.pewinternet.org/fact-sheet/internet-broadband/)
+- [13% of Americans don’t use the internet. Who are they?](http://www.pewresearch.org/fact-tank/2016/09/07/some-americans-dont-use-the-internet-who-are-they/)
+- [One-fifth of Americans report going online ‘almost constantly’](http://www.pewresearch.org/fact-tank/2015/12/08/one-fifth-of-americans-report-going-online-almost-constantly/)
+
 ---
 layout: false
 class: center, middle, inverse
