@@ -335,7 +335,7 @@ class: center, middle, inverse
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](http://carmalou.com)
 ---
-class: center, middle, inverse
+class: left, middle, inverse
 # References:
 
 - [U.S. Smartphone Use in 2015](http://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/)
@@ -350,6 +350,11 @@ class: center, middle, inverse
     </script>
     <script>
       var slideshow = remark.create();
+      
+      var arr = document.getElementsByClassName('remark-slide-number');
+      for(var i = 0; i < arr.length; i++) {
+        arr[i].innerHTML = "<a href='https://www.twitter.com/carmalou'>Twitter: Carmalou</a>";
+      }
     </script>
   </body>
 </html>
